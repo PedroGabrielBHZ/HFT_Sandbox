@@ -1,0 +1,34 @@
+# Compiled object files
+*.o
+*.obj
+
+# Compiled dynamic libraries
+*.so
+*.dylib
+
+# Compiled executables
+*.exe
+*.out
+
+# Build directories
+build/
+bin/
+
+# IDE and editor files
+.vscode/
+.idea/
+*.suo
+*.user
+*.sln
+*.suo
+*.vcxproj
+*.vcxproj.filters
+*.pdb
+
+# Dependency directories
+lib/
+vendor/
+
+# Miscellaneous
+.DS_Store
+Thumbs.db
