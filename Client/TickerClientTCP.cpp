@@ -18,7 +18,7 @@ int main()
 
             // Create a socket and connect to the server
             boost::asio::ip::tcp::socket socket(io_service);
-            socket.connect(boost::asio::ip::tcp::endpoint(boost::asio::ip::address::from_string("192.168.0.26"), 1234));
+            socket.connect(boost::asio::ip::tcp::endpoint(boost::asio::ip::address::from_string("192.168.0.28"), 1234));
 
             for (;;)
             {
@@ -37,6 +37,9 @@ int main()
 
                 // Print the data
                 std::cout.write(buf.data(), len);
+
+                // Sleep for a second
+                std::this_thread::sleep_for(std::chrono::seconds(1));
             }
         }
         catch (std::exception &e)

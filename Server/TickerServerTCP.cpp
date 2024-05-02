@@ -29,6 +29,9 @@ void handleConnections(boost::asio::io_service &io_service, boost::asio::ip::tcp
         // Send the asset value to the client
         boost::system::error_code ignored_error;
         boost::asio::write(socket, boost::asio::buffer(message), boost::asio::transfer_all(), ignored_error);
+
+        // Sleep for some time
+        std::this_thread::sleep_for(std::chrono::milliseconds(200));
     }
 }
 
@@ -45,8 +48,8 @@ void updateAssetPrice(float &assetPrice)
         // Print the price
         std::cout << "Price updated: " << assetPrice << std::endl;
 
-        // Sleep for a second
-        std::this_thread::sleep_for(std::chrono::microseconds(100));
+        // Sleep for some time
+        std::this_thread::sleep_for(std::chrono::milliseconds(100));
     }
 }
 
