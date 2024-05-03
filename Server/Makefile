@@ -1,9 +1,9 @@
-# Makefile for TickerServer
+# Makefile for server
 
-all: TickerServer
+all: server
 
-TickerServer: TickerServer.cpp
-	g++ -o TickerServer TickerServer.cpp -lboost_system -pthread
+server: server.cpp
+	g++ -o server server.cpp -lboost_system -pthread
 
 clean:
-	rm -f TickerServer
+	rm -f server

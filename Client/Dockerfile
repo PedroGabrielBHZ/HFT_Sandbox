@@ -8,10 +8,10 @@ RUN apk add --no-cache g++ make boost-dev
 WORKDIR /app
 
 # Copy the source code and the Makefile into the container
-COPY TickerClient.cpp Makefile ./
+COPY client.cpp Makefile exchanges.txt ./
 
-# Build the TickerClient
+# Build the client
 RUN make
 
-# Run the TickerClient when the container starts
-CMD ["./TickerClient"]
+# Run the client when the container starts
+CMD ["./client", "exchanges.txt"]

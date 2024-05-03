@@ -1,9 +1,9 @@
-# Makefile for TickerClient
+# Makefile for client
 
-all: TickerClient
+all: client
 
-TickerClient: TickerClient.cpp
-	g++ -o TickerClient TickerClient.cpp -lboost_system -pthread
+client: client.cpp
+	g++ -o client client.cpp -lboost_system -pthread
 
 clean:
-	rm -f TickerClient
+	rm -f client

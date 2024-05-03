@@ -8,13 +8,13 @@ RUN apk add --no-cache g++ make boost-dev
 WORKDIR /app
 
 # Copy the source code and the Makefile into the container
-COPY TickerServer.cpp Makefile ./
+COPY server.cpp Makefile ./
 
-# Build the TickerServer
+# Build the server
 RUN make
 
-# Expose port 1234 for the TickerServer
+# Expose port 1234 for the server
 EXPOSE 1234
 
-# Run the TickerServer when the container starts
-CMD ["./TickerServer"]
+# Run the server when the container starts
+CMD ["./server", "1234"]

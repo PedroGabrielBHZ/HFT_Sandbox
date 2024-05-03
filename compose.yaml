@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  client:
+    build: Client/
+  exc1:
+    build: Server/
+    ports:
+      - "1234:1234"
+  exc2:
+    build: Server/
+    ports:
+      - "1235:1234"
+  exc3:
+    build: Server/
+    ports:
+      - "1236:1234"
+  exc4:
+    build: Server/
+    ports:
+      - "1237:1234"

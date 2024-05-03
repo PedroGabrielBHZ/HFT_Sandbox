@@ -49,10 +49,10 @@ void updateAssetPrice()
         }
 
         // Print the price
-        std::cout << "T1 updated: " << t1_price << std::endl;
+        std::cout << make_daytime_string() << "Price: $" << t1_price << std::endl;
 
         // Sleep for some time
-        std::this_thread::sleep_for(std::chrono::milliseconds(500));
+        std::this_thread::sleep_for(std::chrono::milliseconds(1));
     }
 }
 
